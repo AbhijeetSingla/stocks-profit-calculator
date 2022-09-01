@@ -45,7 +45,7 @@ function Manualform() {
         e.preventDefault();
         const plObject = checkPL(initialAmount, quantity, currentAmount);
         setOutput(`Your ${plObject.profit? "profit" : "loss"} is INR ${plObject.totalAmount}. Your per stock ${plObject.profit? "profit" : "loss"} is INR ${plObject.amount}.`);
-        setOutput2(plObject.percent);
+        setOutput2({percentage: plObject.percent, pl: plObject.profit});
     }
 
     return ( 
@@ -104,8 +104,8 @@ function Manualform() {
                     <Typography 
                     variant="h3" 
                     component="p" 
-                    class={ output2? output2 > 100 ? "profit pl-base" : "loss pl-base" : "d-none"} 
-                    >Your {output2 > 100 ? "profit" : "loss"} is {output2}%</Typography>
+                    class={ output2? output2.pl ? "profit pl-base" : "loss pl-base" : "d-none"} 
+                    >Your {output2.pl ? "profit" : "loss"} is {output2.percentage}%</Typography>
                 </Container>
             </Box>
         </>
