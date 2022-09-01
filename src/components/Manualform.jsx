@@ -97,7 +97,7 @@ function Manualform() {
                     </FormControl>
                 </Container>
                 <Container maxWidth="md" align="center" sx={{ mt: 5}}>
-                    <Button variant="contained" type="submit">Get Balance</Button>
+                    <Button variant="contained" type="submit">Check</Button>
                 </Container>
                 <Container maxWidth="md" align="center" sx={{ mt: 5}}>
                     <Typography variant="h3" component="p">{output}</Typography>
